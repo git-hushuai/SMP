@@ -1,0 +1,5 @@
+<view style='margin:0 auto'>
+ <text>123</text>
+  <web-view src="http://activity-h5-test.ewgvip.com/share/build/"></web-view>
+ 
+</view>

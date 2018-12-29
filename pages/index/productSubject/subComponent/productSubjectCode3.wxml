@@ -1,0 +1,13 @@
+
+
+
+<template name="productSubjectCode3">
+    <view wx-if="{{item.code==3}}" class='secKillModelContain2' style='background:red;'>
+      <block wx:for="{{item.data.content}}" wx:key="{{item.data.content[idx].icon_url.CN}}" wx:for-index="idx">
+        <view class='subSecKillItemContainer' style='width:25%;height:80px;background:white;justify-content: center;' bindtap='userTapCheckProductListsAction' data-model='{{item}}'>
+          <image src='{{item.icon_url.CN}}' class='subSecKillImage'></image>
+          <label class='subSecKillLabelClass'>{{item.icon_title.CN}}</label>
+        </view>
+      </block>
+  </view>
+</template>

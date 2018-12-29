@@ -1,0 +1,7 @@
+
+
+<template name="productSubjectCode6">
+    <view class='subSecKillCode6TitleContainStyle' style='height:50px;width:100%;justify-content:center;' wx:if='{{item.code==6}}' bindtap='userLongTapProductAction' data-model='{{item}}'>
+      <label class='subSecKillCode6TitleStyle'>{{item.data.content.title.CN}}</label>
+  </view>
+</template>

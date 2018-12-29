@@ -1,0 +1,7 @@
+
+
+
+<template name="productSubject13">
+        <view wx-if="{{item.code==13}}" style='width:100%;height:{{item.imgWidth}};background:{{item.bg_color}};'>
+        </view>
+</template>

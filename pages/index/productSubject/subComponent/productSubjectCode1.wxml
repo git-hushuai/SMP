@@ -1,0 +1,11 @@
+
+
+<template name="productSubjectCode1.wxml">
+    <swiper class='shopMallMain_HeadBannerViewSwiper' autoplay="true" indicator-dots="true" wx:if='{{item.code == 1}}' style='height:{{item.contentH}}'>
+      <block wx:for="{{item.data.content}}" wx:key="{{action}}" wx:for-index="idx">
+          <swiper-item>
+                <image src='{{item.img_url.CN}}' class='shopMallMain_HeadBannerImageItem' ontap='userTapADBannerImage' data-model='{{item}}'></image>
+          </swiper-item>
+      </block>
+  </swiper>
+</template>

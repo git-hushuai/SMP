@@ -1,0 +1,50 @@
+
+<!-- code16 -->
+<import src="./productSubjectBanner.wxml"></import>
+<!-- code19 -->
+<import src="./productSubjectCode19.wxml"></import>
+<!-- code13 -->
+<import src="./productSubjectCode13.wxml"></import>
+<!-- code17 -->
+<import src='./productSubjectCode17.wxml'></import>
+<!-- code15 -->
+<import src="./productSubjectCode15.wxml"></import>
+<!-- code3 -->
+<import src="./productSubjectCode3.wxml"></import>
+<!-- code6 -->
+<import src="./productSubjectCode6.wxml"></import>
+<!-- code18 -->
+<import src="./productSubjectCode18.wxml"></import>
+<!-- code7 -->
+<import src="./productSubjectCode7.wxml"></import>
+<!-- code1 -->
+<import src="./productSubjectCode1.wxml"></import>
+
+<template name="productSubject_pagesLayout">
+        <view>
+          <template is="productSubBannerxml" data="{{item:item}}" wx:if="{{item.code == 16 || item.code == 4}}">
+          </template>
+
+          <template is="productSubjectCode19" data="{{item:item}}" wx:if="{{item.code == 19}}"></template>
+
+          <template is="productSubject13" data="{{item:item}}" wx:if="{{item.code == 13}}"></template>
+
+          <template is="productSubjectCode17" data="{{item:item}}" wx:if="{{item.code == 17}}"></template>
+
+          <template is="productSubjectCode15" data="{{item:item}}" wx:if="{{item.code == 15}}"></template>
+
+          <template is="productSubjectCode3" data="{{item:item}}" wx:if="{{item.code == 3}}"></template>
+
+          <template is="productSubjectCode6" data="{{item:item}}" wx:if="{{item.code == 6}}"></template>
+
+          <template is="productSubjectCode18" data="{{item:item}}" wx:if="{{item.code == 18}}"></template>
+
+          <template is='productSubjectCode7' data="{{item:item}}" wx:if="{{item.code == 7}}"></template>
+
+          <template is="productSubjectCode1"  data="{{item:item}}" wx:if="{{item.code == 1}}"></template>
+
+        </view>        
+
+
+
+</template>

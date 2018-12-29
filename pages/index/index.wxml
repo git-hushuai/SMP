@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<scroll-view class='shopmallMain_scrollview' scroll-y="true" enable-back-to-top="true">
+
+
+<block wx:for='{{homeContentModel}}' wx:for-index='idx' wx:key='{{code}}'>
+<!-- code == 1 banner-->
+  <swiper class='shopMallMain_HeadBannerViewSwiper' autoplay="true" indicator-dots="true" wx:if='{{item.code == 1 || item.code == 22}}' style='height:{{item.contentH}}'>
+      <block wx:for="{{BannerList}}" wx:key="{{Id}}" wx:for-index="idx">
+          <swiper-item>
+                <image src='{{BannerList[idx].img_url.CN}}' class='shopMallMain_HeadBannerImageItem' ontap='userTapADBannerImage' data-model='{{item}}'></image>
+          </swiper-item>
+      </block>
+  </swiper>
+
+  <!--code == 16-->
+  <view style="height:{{item.contentH}} ;" wx:if='{{item.code == 16}}' >
+      <image style='width:100%;height:100%' src='{{item.data.content.img_url.CN}}' bindtap='userTapSecKillActivityAction' data-model='{{item}}'></image>
+    </view>
+<!-- code ==13 空间间隙 -->
+  <view style='height:{{item.contentH}};background:{{item.frame.bg_color}}' wx:if='{{item.code==13}}'></view>
+
+  <!--code ==20  -->
+<view style='height:{{item.contentH}};background:purple;display: flex;flex-wrap: nowrap;justify-content:center;' wx:if='{{item.code==20}}'>
+    <block wx:for="{{item.data.content}}" wx:key="{{Id}}" wx:for-index="idx">
+                <view class='shopMallMain_itemActionContainer' bindtap='userTapADBannerImage' data-model='{{item}}'>
+                <image src='{{item.img_url.CN}}' class='shopMallMain_iconItem'></image>
+                </view>
+    </block>
+</view>
+
+<!-- code =21 -->
+<view style='height:35px;background:{{item.frame.bg_color}};display:flex;' wx:if='{{item.code==21}}'>
+      <!-- 秒杀左边图片 -->
+  <image style='height:100%;width:9rem;' src='{{item.data.content.left_img.url}}'></image>
+    <!-- 分隔线 -->
+  <view style='width:1px;height:80%;background:purple;align-self: center;'></view>
+    <!-- 秒杀日期 -->
+  <label style='width:100px;margin-left: 10px;font-size: 12px;color:#333;'>{{secKillModel.title.CN}}</label>
+    <!-- 秒杀剩余日期提示 -->
+  <view style='height:100%;width:12rem;background:brown;margin-left:10px;'></view>
+  <!-- 秒杀右边图片 -->
+ <view style='float: right;margin-right:0;height:100%;width:100%;'>
+      <image style='height:100%;width:20%;float: right;margin-right: 12px;display: flex;' src='{{item.data.content.right_img.url}}'></image>
+</view>
+</view>
+
+<!-- code ==21 秒杀商品 -->
+ <view style='height:120px;background:white;' wx:if='{{item.code ==21}}'>
+  <scroll-view class='shopMallMain_TopActionContainer_scrollView' scroll-x="true">
+        <block wx:for="{{secKillModel.product_list}}" wx:key="{{id}}" wx:for-index="idx" wx:for-item='itemmodel'>
+         <!-- style='background-image: url({{item.goods_thumb}});' -->
+            <view  wx:if="{{idx<item.config.show_product_count}}" class='shopMallMain_TopActionContainer_itemContainer' bindtap='userCheckProductDetailAction' data-model='{{itemmodel}}' data-type='{{1}}'>
+            <image src='{{itemmodel.goods_thumb}}' style='margin-top:10%;margin-left:10%; width:80%;height:60%;'></image>
+            <view style='background:white;margin-top:0;justify-content:center;'>
+              <label class='secKillProductItemtext'>{{itemmodel.goods_title.CN}}
+              </label>
+              <label style='color:#d72c2a;align-self:center;' class='secKillProductItemtext'>¥  {{itemmodel.market_price}}
+              </label>
+              <label style='color:#999;align-self:center;' class='secKillProductItemtext'>¥ {{itemmodel.product_price}}
+              </label>
+            </view>
+            </view>    
+        </block>
+  </scroll-view>
+</view>
+
+<!-- code =6 -->
+<view class='subSecKillCode6TitleContainStyle' style='height:40px;width:100%;justify-content:center;display:flex;' wx:if='{{item.code==6}}' bindtap='userCheckProductLists' data-model='{{item}}'>
+      <label class='subSecKillCode6TitleStyle'>{{item.data.content.title.CN}}</label>
+      <view style='height:0.5rem;background:#dae2e3;width:100vw;'></view>
+</view>
+
+<!-- code=7 -->
+<view wx:if='{{item.code == 7}}' style='height:{{item.contentH}};' class='subSecKillCode7ContainerStyle'>
+      <block wx:for="{{item.data.content}}" wx:for-index='idx' wx:key='{{item.data.content[idx].goods_thumb}}'>
+          <view class='subSecKillCode7ItemContainerStyle' bindtap='userCheckProductDetail' data-model='{{item}}'>
+              <image src='{{item.goods_thumb}}' style='width:90%;height:60%; align-self: center;'></image>
+              <label class='subSecKillCode7ItemTextStyle,my_text_2' style='text-align:center;'>{{item.goods_title.CN}}</label>
+              <label class='subSecKillCode7ItemTextStyle,my_text_2'>{{item.product_price}}</label>
+              <label class='subSecKillCode7ItemTextStyle,my_text_2' style=''>{{item.market_price}}</label>
+          </view>
+      </block>
+</view>
+
+<!-- end -->
+
+
+</block>
+
+</scroll-view>

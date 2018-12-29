@@ -1,0 +1,9 @@
+
+
+<template name="productSubjectCode18">
+    <view wx:if="{{item.code==18}}" class='subSecKillCode18ContainerStyle' style='width:100%;'>
+      <block wx:for="{{item.data.content}}" wx:key='{{item.data.content[idx].img_url.CN}}' wx:for-index='idx'>
+          <image style='width:33.3%;vertical-align:top;' src='{{item.img_url.CN}}' bindtap='userTapCheckProductListsAction' data-model='{{item}}' mode='widthFix'></image>
+      </block>
+</view>
+</template>

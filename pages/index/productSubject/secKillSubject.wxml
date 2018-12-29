@@ -1,0 +1,98 @@
+
+<import src="./subComponent/productSubjectPage_layout.wxml"></import>
+
+
+
+<scroll-view class='subjectMain_scrollview' scroll-y="true" enable-back-to-top="true">
+
+          <template is="productSubject_pagesLayout" data="{{item:item}}" wx:key="{{index}}" wx:for="{{secKillModel.list}}"></template>
+
+          <view style='height:20px;'></view>
+
+      <!-- <block wx:for="{{secKillModel.list}}" wx:key="{{item.data.content.img_url.CN}}" wx:for-index="idx"> -->
+<!-- code==16 -->
+            <!-- <image wx:if="{{item.code==16}}" src='{{item.data.content.img_url.CN}}' mode='widthFix' style='width:100%;height:{{item.imgWidth}};vertical-align:top;' bindtap='userLongTapProductAction' data-model='{{item}}'></image> -->
+
+<!-- code==19 -->
+      <!-- <view class='subjectProductSubContain' wx:if="{{item.code==19}}" style='width:100%;'>
+         <block wx:for="{{item.data.content}}" wx:key="{{idx}}" wx:for-index="idx">
+            <image src='{{item.img_url.CN}}' mode='widthFix' style='width:25.0%;vertical-align:top;' bindtap='userTapCheckProductListsAction' data-model='{{item}}'></image>
+         </block>
+      </view> -->
+
+<!-- code==17 -->
+          <!-- <view class='seKillProductContain' wx:if="{{item.code==17}}" style='width:100%;height:{{item.imgWidth}};background:white;'>
+              <block wx:for="{{item.data.content}}" wx:key="{{item.data.content[idx2].img_url.CN}}" wx:for-index="idx2">
+                <view style='width:50%;height:100%;background:white' bindtap='userLongTapProductAction' data-model='{{item}}'>
+                    <image src='{{item.img_url.CN}}' style='width:100%;height:100%;'></image>
+                </view>
+              </block>
+          </view> -->
+
+<!-- code==15 -->
+    <!-- <view class='seKillProductContain' wx:if="{{item.code==15}}" style='width:100%;background:white;margin-top:10px;'>
+              <block wx:for="{{item.data.content}}" wx:key="{{item.data.content[idx2].goods_thumb}}" wx:for-index="idx2">
+                <view style='width:48%;background:white;display:flex;flex-direction:column;' bindtap='userCheckProductDetailAction' data-model='{{item}}'>
+                    <image src='{{item.goods_thumb}}' style='width:100%;height:50vw;'></image>
+                    <label class='my_text_2 productNameStyle'>{{item.goods_title.CN}}</label>
+                   <text class='productDefaultPrice'>￥{{item.product_price}} </text>
+                   <label class='productMarketPrice'>￥{{item.market_price}}</label>
+                </view>
+              </block>
+    </view> -->
+  <!-- code=4 -->
+  <!-- <view wx-if="{{item.code==4}}">
+    <image src='{{item.data.content.img_url.CN}}' style='width:100%'></image>
+  </view> -->
+
+  <!-- code=13 -->
+  <!-- <view wx-if="{{item.code==13}}" style='width:100%;height:{{item.imgWidth}};background:{{item.bg_color}};'>
+  </view> -->
+
+  <!-- code==3 -->
+  <!-- <view wx-if="{{item.code==3}}" class='secKillModelContain2' style='background:red;'>
+      <block wx:for="{{item.data.content}}" wx:key="{{item.data.content[idx].icon_url.CN}}" wx:for-index="idx">
+        <view class='subSecKillItemContainer' style='width:25%;height:80px;background:white;justify-content: center;' bindtap='userTapCheckProductListsAction' data-model='{{item}}'>
+          <image src='{{item.icon_url.CN}}' class='subSecKillImage'></image>
+          <label class='subSecKillLabelClass'>{{item.icon_title.CN}}</label>
+        </view>
+      </block>
+  </view> -->
+
+  <!-- code=6-->
+  <!-- <view class='subSecKillCode6TitleContainStyle' style='height:50px;width:100%;justify-content:center;' wx:if='{{item.code==6}}' bindtap='userLongTapProductAction' data-model='{{item}}'>
+      <label class='subSecKillCode6TitleStyle'>{{item.data.content.title.CN}}</label>
+  </view> -->
+
+<!-- code==18 -->
+<!-- <view wx:if="{{item.code==18}}" class='subSecKillCode18ContainerStyle' style='width:100%;'>
+      <block wx:for="{{item.data.content}}" wx:key='{{item.data.content[idx].img_url.CN}}' wx:for-index='idx'>
+          <image style='width:33.3%;vertical-align:top;' src='{{item.img_url.CN}}' bindtap='userTapCheckProductListsAction' data-model='{{item}}' mode='widthFix'></image>
+      </block>
+</view> -->
+
+<!-- code=7 -->
+<!-- <view wx:if='{{item.code == 7}}' style='height:{{item.imgWidth}};' class='subSecKillCode7ContainerStyle'>
+      <block wx:for="{{item.data.content}}" wx:for-index='idx' wx:key='{{item.data.content[idx].goods_thumb}}'>
+          <view class='subSecKillCode7ItemContainerStyle' bindtap='userCheckProductDetailAction' data-model='{{item}}'>
+              <image src='{{item.goods_thumb}}' style='width:90%;height:60%; align-self: center;'></image>
+              <label class='subSecKillCode7ItemTextStyle,my_text_2' style='text-align:center;'>{{item.goods_title.CN}}</label>
+              <label class='subSecKillCode7ItemTextStyle,my_text_2'>{{item.product_price}}</label>
+              <label class='subSecKillCode7ItemTextStyle,my_text_2' style=''>{{item.market_price}}</label>
+          </view>
+      </block>
+</view> -->
+
+<!-- code == 1 banner-->
+  <!-- <swiper class='shopMallMain_HeadBannerViewSwiper' autoplay="true" indicator-dots="true" wx:if='{{item.code == 1}}' style='height:{{item.contentH}}'>
+      <block wx:for="{{item.data.content}}" wx:key="{{action}}" wx:for-index="idx">
+          <swiper-item>
+                <image src='{{item.img_url.CN}}' class='shopMallMain_HeadBannerImageItem' ontap='userTapADBannerImage' data-model='{{item}}'></image>
+          </swiper-item>
+      </block>
+  </swiper> -->
+
+            
+  <!-- </block> -->
+
+</scroll-view>

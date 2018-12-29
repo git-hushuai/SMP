@@ -1,0 +1,48 @@
+
+<scroll-view class='base_scrollview'>
+
+
+    <view style='height:46px;display:flex;margin-top:10vh;'>
+          <image style='align-self:center;width:100%;height:100%;' src='../../../source/image/registerBrand.png' mode='aspectFit'></image>
+    </view>
+
+    <!-- caver -->
+    <view class='shopmall_CaverView' style='margin-left:14px;margin-right:14px;height:1px;background:#fafafa;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;background:#dae2e3;margin-top:8vh;'></view>
+
+    <view style='height:44px;flex-direction:row;margin-left:14px;margin-right:14px;'>
+        <label style='font-size:12px;color:#333;text-align:left;align-self:center;height:100%;line-height:44px;'>国家/地区</label>
+        <label style='font-size:12px;color:#333;text-align:left;align-self:center;height:100%;line-height:44px;margin-left:10vw;'>中国</label>
+    </view>
+<!-- 电话号码 -->
+    <view class='itemContainerView'>
+        <label style='font-size:12px;color:#333;text-align:left;align-self:center;height:100%;line-height:44px;'>+86</label>
+        <input style='font-size:12px;color:#333;align-self:center;margin-left:10vw;display:flex;flex:1;' placeholder='请填写手机号码' type='number' maxlength='11' bindinput='userInputAccount'></input>
+    </view>
+
+        <!-- caver -->
+    <view class='shopmall_CaverView' style='margin-left:14px;margin-right:14px;height:1px;background:#fafafa;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;background:#dae2e3;'></view>
+
+<!-- 密码 -->
+    <view class='itemContainerView'>
+        <label style='font-size:12px;color:#333;text-align:left;align-self:center;height:100%;line-height:44px;'>密码</label>
+        <input style='font-size:12px;color:#333;align-self:center;margin-left:10vw;display:flex;flex:1;' placeholder='请填写密码' type='number' maxlength='16' password='{{isSecurityType}}' bindinput='userInputPwdAction'></input>
+        <view style='width:40px;align-self:center;justify-content:center;display:flex;' bindtap='userChangePwdSecurityType'>
+            <image src='{{isSecurityType ? securityImgSource : noSecurityImgSource}}' mode='aspectFit' style='align-self:center;height:20px;width:20px;'></image>
+        </view>
+    </view>
+
+        <!-- caver -->
+    <view class='shopmall_CaverView' style='margin-left:14px;margin-right:14px;height:1px;background:#fafafa;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;background:#dae2e3;'></view>
+
+
+    <view style='height:40px;background:#ed3b45;width:90vw;align-self:center;margin-top:10vh;justify-content: center;align-items:center;display:flex;margin-left:5vw;border-radius: 5px;' bindtap='userLoginAction' >
+      <label style='height:40px;line-height:40px;text-align:center;align-self:center;color:white;font-size:15px;'>登录</label>
+    </view>
+
+
+    <view style='height:30px;width:90vw;align-self:center;margin-top:1vh;display:flex;margin-left:5vw;'>
+      <label style='height:30px;line-height:30px;text-align:center;align-self:center;color:#d72c2a;font-size:15px;'>忘记密码?</label>
+           <label style='height:30px;line-height:30px;text-align:right;align-self:center;color:#d72c2a;font-size:15px;flex:1;'>短信验证码登录</label>
+    </view>
+
+</scroll-view>

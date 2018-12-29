@@ -1,0 +1,29 @@
+
+
+<!-- <view> -->
+
+      <scroll-view class='ewgProductListPage_ScrollView' scroll-y='true'  enable-back-to-top="true">
+          <!-- 顶部导航 -->
+      <view class='ClassifyProductListPage_TopView'>
+            <block wx:for="{{sortKeys}}" wx:key="*this" wx:for-index="idx">
+                <text class='ClassifyProductListPage_TopText' style='color:{{idx==sortIndex?selectColor:defaultColor}}' bindtap='userChangeSortAction' data-sortIndex='{{idx}}'>{{item}}</text>
+            </block>
+      </view>
+
+      <view class='ClassifyProductListPage_itemContainerView'>
+          <block wx:for='{{productListsModel}}' wx:for-index='idx' wx:key='{{id}}'>
+              <view class='productItemContainerStyle' bindtap='userCheckProductDetailAction' data-model='{{item}}'>
+                <image style='width:98%;align-self:center;height:70%;' src='{{item.goods_thumb}}' mode=' aspectFit'></image>
+                <label class='subSecKillCode7ItemTextStyle,my_text_2'>{{item.goods_title.CN}}</label>
+                <label class='subSecKillCode7ItemTextStyle'>{{item.market_price}}</label>
+                <view  style='display:flex;flex-direction: row;'>
+                    <label class='subSecKillCode7ItemTextStyle'>{{item.product_price}}</label>
+
+                   <label class='subSecKillCode7ItemTextStyle' style='text-align:right;flex:1;align-self:center;'>已售  {{item.goods_total}}</label>   
+                </view>
+              </view>
+          </block>
+      </view>
+      </scroll-view>
+<!-- </view> -->
+

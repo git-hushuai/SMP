@@ -1,0 +1,11 @@
+
+<scroll-view class="BaseScrollView">
+    <view class='box'>
+      <view class='item'>
+        <view class='itemContainer-1'></view>
+        <view class='itemContainer-2' style='background:{{bgColor}};height:{{vHeight}}'></view>
+        <!-- <view class='itemContainer-3'></view> -->
+      </view>
+    </view>
+
+</scroll-view>

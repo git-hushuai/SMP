@@ -1,0 +1,59 @@
+{
+  "debug": "true",
+  "pages":[
+    "pages/index/index",
+    "pages/crowdFund/index",
+    "pages/circle/eCircle",
+    "pages/shopCart/shopCart",
+    "pages/mine/mineProfile",
+    "pages/index/productSubject/secKillSubject",
+    "pages/index/productList/productList",
+    "pages/index/ProductDetail/EWGProductDetail",
+    "pages/index/productCate/productCate",
+    "pages/index/Login/ewgLogin"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#d72c2a",
+    "borderStyle": "white",
+    "backgroundColor": "#FFF",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/source/image/homeNormal.png",
+      "selectedIconPath": "/source/image/homeSelect.png"
+    },
+    {
+      "pagePath": "pages/crowdFund/index",
+      "text": "众筹",
+      "iconPath": "/source/image/croewdFundNormal.png",
+      "selectedIconPath": "/source/image/croewdFundSelect.png"
+    },
+    {
+          "pagePath": "pages/circle/eCircle",
+          "text": "易网圈",
+          "iconPath": "/source/image/eCircle.png",
+          "selectedIconPath": "/source/image/eCircle.png"
+    },
+    {
+          "pagePath": "pages/shopCart/shopCart",
+          "text": "购物车",
+          "iconPath": "/source/image/shopCartNormal.png",
+          "selectedIconPath": "/source/image/shopCartSelect.png"
+    },
+    {
+                  "pagePath": "pages/mine/mineProfile",
+                  "text": "个人中心",
+                  "iconPath": "/source/image/mineProfileNormal.png",
+                  "selectedIconPath": "/source/image/mineProfileSelect.png"
+    }
+    ]
+  }
+}

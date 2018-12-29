@@ -1,0 +1,6 @@
+
+
+.bannerImage{
+  width: 100vw;
+  vertical-align: top;
+}

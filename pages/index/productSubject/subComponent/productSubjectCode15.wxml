@@ -1,0 +1,15 @@
+
+
+
+<template name="productSubjectCode15">
+      <view class='seKillProductContain' wx:if="{{item.code==15}}" style='width:100%;background:white;margin-top:10px;'>
+              <block wx:for="{{item.data.content}}" wx:key="{{item.data.content[idx2].goods_thumb}}" wx:for-index="idx2">
+                <view style='width:48%;background:white;display:flex;flex-direction:column;' bindtap='userCheckProductDetailAction' data-model='{{item}}'>
+                    <image src='{{item.goods_thumb}}' style='width:100%;height:50vw;'></image>
+                    <label class='my_text_2 productNameStyle'>{{item.goods_title.CN}}</label>
+                   <text class='productDefaultPrice'>￥{{item.product_price}} </text>
+                   <label class='productMarketPrice'>￥{{item.market_price}}</label>
+                </view>
+              </block>
+    </view>
+</template>

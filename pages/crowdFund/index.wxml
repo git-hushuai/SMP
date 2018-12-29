@@ -1,0 +1,3 @@
+<view style='margin:0 auto;background:red;'>
+  <web-view src="https://activity-h5.ewgvip.com/activity_list/index.html"></web-view>
+</view>

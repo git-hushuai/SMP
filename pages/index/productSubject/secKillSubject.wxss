@@ -1,0 +1,146 @@
+
+@import "./subComponent/productSubjectBanner.wxss";
+
+.subjectMain_scrollview{
+  width: 100%;
+  height: 100%;
+  background:#fff;
+  margin: 0 auto;
+  display: block; 
+}
+
+.seKillProductContain{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.secKillModelContain2{
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.subSecKillItemContainer{
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.subSecKillImage{
+  margin-top: 2%;
+  width: 52px;
+  height: 65%;
+  align-self: center;
+}
+
+.subSecKillLabelClass{
+  font-size: 10px;
+  text-align: center;
+  color: #333;
+  height: 10%;
+}
+
+.subSecKillCode6TitleStyle{
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  align-self: center;
+  margin-top: 0;
+}
+
+.subSecKillCode6TitleContainStyle{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: white;
+}
+
+.subSecKillCode18ContainerStyle{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* background-color: olivedrab; */
+}
+
+.subSecKillCode7ContainerStyle{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  /* background-color: khaki; */
+  flex-direction: row;
+  /* justify-content: space-around; */
+}
+
+.subSecKillCode7ItemContainerStyle{
+  flex: 1;
+  background-color: white;
+  height: 160px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.subSecKillCode7ItemTextStyle{
+  font-size: 10px;
+  line-height: 12px;
+  color: #515151;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.my_text_2 {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  align-content: flex-start;
+}
+
+.shopMallMain_HeadBannerViewSwiper{
+  width: 100%;
+  height: 60.5vw;
+  background: #f3f3f3;
+}
+
+.shopMallMain_HeadBannerImageItem{
+  width: 100%;
+  height: 100%;
+}
+
+
+.subjectProductSubContain{
+  background-color: white;
+}
+
+
+.productNameStyle{
+  font-size: 12px;
+  line-height: 14px;
+  color: #515151;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 5px;
+}
+
+
+.productDefaultPrice
+{
+  font-size: 12px;
+  color: #999;
+  margin-left: 0px;
+  margin-top: 4px;
+  text-decoration: line-through;
+}
+
+.productMarketPrice{
+  font-size: 12px;
+  color: rgb(243, 47, 47);
+  margin-left: 0px;
+  margin-top: 4px;
+}

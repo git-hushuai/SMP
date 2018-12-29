@@ -1,0 +1,56 @@
+
+
+<template name='productScaleSelect'>
+<view  class="modalDlg"  wx:if='{{showModal}}'>
+
+
+<!-- 顶部配置信息 -->
+    <view style='height:100px;margin-top:10px;margin-left:10px;background-color:#fafafa;align-self:left;margin-right:10px;width:calc(100% - 20px);flex-direction:row;display:flex;'>
+      <image style='width:100px;height:100px;' src='{{productDetailModel.goods_thumb}}' mode='aspectFit'></image>
+      <view style='flex:1;height:100%;background:white;'>
+          <label style='font-size:12px;color:#d72c2a;margin-left:10px;'>    ￥</label>
+          <label style='font-size:12px;color:#d72c2a;'>{{productDetailModel.market_price}}</label>
+          <label style='font-size:10px;color:#b9b9b9;margin-left:2px;'>  ￥</label>
+          <label style='font-size:10px;color:#b9b9b9;'>{{productDetailModel.product_price}}</label>
+          <view style='height:20px;background:white;'>
+              <label style='font-size:12px;color:#b9b9b9;align-self:center;line-height:20px;margin-left:10px;'>库存:{{productDetailModel.goods_total}}</label>
+          </view>
+      </view>
+    </view>
+
+<!-- spec数组 -->
+    <view style='width:100%;height:1px;background:#dae2e3;display:flex;margin-top:10px;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;'></view>
+<view style='flex-direction: column;margin-left:14px;'>
+            <block wx:for='{{productDetailModel.specs}}' wx:key='id' wx:for-index='idx'>
+            <view><label style='height:20px;line-height:20px;color:#b9b9b9;font-size:12px;'>{{item.spec_name.CN}}</label></view>
+
+            <block wx:for='{{item.item}}' wx:for-index='idx2' wx:key='id' wx:for-item='item2'>
+            <label class='productSpecItem' bindtap='userSelectScaleAction' data-model='{{item2}}' data-specIndex='{{idx}}'>{{item2.item_name.CN}}</label>
+            </block>
+        </block>
+</view>
+
+<!-- 商品数量 -->
+<view class='productAmountContainer'>
+      <label style='height:20px;line-height:20px;color:#b9b9b9;font-size:12px;margin-left:14px;align-self:center;'>数量</label>
+      <view style='height:20px;line-height:20px;color:#b9b9b9;font-size:12px;margin-left:14px;flex:1;margin-right:40px;'>
+
+          <view class='bottomActionView_AmountView'>
+
+             <view class='bottomActionView_AmountActionView'>
+                  <block wx:for="{{['-',userSelectProductAmount,'+']}}" wx:key="*this" wx:for-index="idx">
+                        <view class='bottomActionView_AmountActionItemView' bindtap='userAddOrReduceProductAmount' data-index='{{idx}}'>
+                              {{item}}
+                        </view>
+                        <view class='bottomActionView_AmountActionCaverView' wx:if="{{idx != 2}}"></view>
+                  </block>
+             </view>
+        </view>
+      </view>
+</view>
+
+<!-- 确认加入 -->
+<view class='confirmAddShopCart' style='justify-content: center;' bindtap='userAddProductToShopCartAction'><label class='confirmAddShopCartLabel'>确认加入</label></view>
+
+</view>
+</template>

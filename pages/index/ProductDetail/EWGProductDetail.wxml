@@ -1,0 +1,113 @@
+
+<view class='width:100%;height:100vh;'>
+
+<view catchtouchmove='move'>
+    <import src="../../CommonView/modelBGView/DNModelBGView.wxml" />
+    <template is="DNModelBGViewXML" data="{{showModal:showModal}}"/>
+</view>
+
+<import  src='productScaleSelect/productScaleSelect.wxml'/>
+<template is='productScaleSelect' data="{{showModal:showModal,productDetailModel:productDetailModel,userSelectProductAmount:userSelectProductAmount}}" />
+
+<scroll-view class='baseScrollView' scroll-y='true'  enable-back-to-top="true" scroll-x="false">
+
+<!-- goods_content-->
+    <swiper class='shopMallMain_HeadBannerViewSwiper' autoplay="{{true}}"  wx:if='{{productDetailModel.pictures.length > 0}}' style='height:100vw;'>
+          <block wx:for="{{productDetailModel.pictures}}" wx:key="*this" wx:for-index="idx">
+              <swiper-item>
+                    <image src='{{item}}' class='shopMallMain_HeadBannerImageItem'></image>
+              </swiper-item>
+          </block>
+    </swiper>
+
+  <!-- caver -->
+  <!-- <view class='shopmall_CaverView' style='height:10px;background:#fff;display:flex;'></view> -->
+
+<!-- 价格 -->
+      <view style='height:35px;background:white;display:flex;'>
+        <label style='align-self:center;font-size:12px;color:#ed3b45;margin-left:14px;'>¥</label>
+        <label style='align-self:center;font-size:16px;color:#ed3b45;'>{{productDetailModel.market_price}}</label>
+
+          <label style='align-self:center;font-size:10px;color:#888;margin-left:5px;'> ¥{{productDetailModel.product_price}}</label>
+      </view>
+
+<!-- 商品介绍 -->
+      <label class='subSecKillCode7ItemTextStyle,my_text_2'>{{productDetailModel.goods_title.CN}}</label>
+
+  <!-- goods_description -->
+      <label class='subSecKillCode7ItemTextStyle,my_text_2' style='color:#999;margin-top:5px;'>{{productDetailModel.goods_description.CN}}</label>
+
+  <!-- single line view -->
+      <view class='shopmall_CaverView' style='height:1px;background:#dae2e3;display:flex;margin-top:20px;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;'></view>
+
+      <view style='height:30px;flex-direction:row;display:flex;background:white;justify-content: space-around;font-size:10px;color:#333'>
+          <view style='align-self:center;color:#333'>加入收藏</view>
+          <view style='align-self:center;'>库存:{{productDetailModel.activity_info.goods_total?productDetailModel.activity_info.goods_total:productDetailModel.goods_total}}</view>
+          <view style='align-self:center;'>销量:{{productDetailModel.sales}}</view>
+      </view>
+<!-- caver -->
+        <view class='shopmall_CaverView' style='height:20px;background:#fafafa;display:flex;margin-top:0px;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;'></view>
+
+<!-- 评价 样式要修改-->
+<view style='font-size:12px;color:#333;align-items: center;display:flex;height:30px;justify-content: space-around;'>
+    <label style='align-self:center;display:flex;flex:1;text-align:center;line-height:30px;height:20px;margin-left:14px;'>暂无评价</label>
+</view>
+
+
+<!-- caver -->
+    <view class='shopmall_CaverView' style='height:20px;background:#fafafa;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;'></view>
+
+<!-- 产品参数 -->
+<view style='font-size:12px;color:#333;align-items: center;display:flex;height:40px;justify-content: center;' wx:if='{{productDetailModel.goods_param_diy.length > 0}}'>
+    <label style='display:flex;text-align:center;line-height:40px;height:40px;margin-left:14px;'>产品参数</label>
+</view>
+
+  <!-- single line view -->
+  <view class='shopmall_CaverView' style='height:1px;background:#dae2e3;display:flex;margin-top:0px;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;' wx:if='{{productDetailModel.goods_param_diy.length > 0}}'></view>
+
+<!-- 产品参数 -->
+<block wx:for='{{productDetailModel.goods_param_diy}}' wx:for-index='idx' wx:key='{{id}}' wx:if='{{productDetailModel.goods_param_diy.length > 0}}'>
+    <view style='font-size:12px;color:#333;align-items: center;display:flex;height:30px;justify-content:flex-start;'>
+    <label style='display:flex;text-align:center;line-height:29px;height:30px;margin-left:14px;'>{{item.key.CN}}        {{item.value.CN}}</label>
+</view>
+      <view class='shopmall_CaverView' style='width:100vw;height:1px;background:#dae2e3;display:flex;margin-top:0px;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;'></view>
+</block>
+
+<!-- caver -->
+    <view class='shopmall_CaverView' style='height:20px;background:#fafafa;-webkit-transform:scale(1,0.5);transform:scale(1,0.5);-webkit-transform-origin: center bottom; transform-origin:center bottom;' wx:if='{{productDetailModel.goods_param_diy.length > 0}}'></view>
+
+<!-- 图文详情 -->
+<view style='font-size:12px;color:#333;align-items: center;display:flex;height:40px;justify-content: center;' wx:if='{{productDetailModel.goods_content.CN.length > 0}}'>
+    <label style='display:flex;text-align:center;line-height:40px;height:40px;margin-left:14px;'>图文详情</label>
+</view>
+
+<!--goods_content 描述图片  -->
+<view>
+<block wx:for='{{productDetailModel.goods_content.CN}}' wx:for-index='idx' wx:key="*this">
+    <image src='{{item}}' mode='widthFix' style='width:100vw;margin:0 auto;vertical-align:top;'></image>
+</block>
+</view>
+
+</scroll-view>
+
+<view style='width:100vw;position: fixed;bottom:0px;height: 44px;background-color: rebeccapurple;display:flex;z-index:1000;flex-direction:row;'>
+<!-- 收藏 -->
+        <view style='flex:1.5;height:100%;background:white;flex-direction:column;align-items: center;display:flex;'>
+            <image src='../../../source/image/icproductcollect.png'  style='width:35%;height:35%;margin-top:6px;' mode='aspectFit'></image>
+            <label style='font-size:10px;color:#666;text-align:center;margin-top:6px;'>收藏</label>
+        </view>
+        <!-- 购物车 -->
+        <view style='flex:1.5;height:100%;background:white;flex-direction:column;align-items: center;display:flex;'>
+                        <image src='../../../source/image/ic_product_ cart.png'  style='width:35%;height:35%;margin-top:6px;' mode='aspectFit'></image>
+            <label style='font-size:10px;color:#666;text-align:center;margin-top:6px;'>购物车</label>
+        </view>
+
+<!-- 加入购物车 -->
+        <label style='flex:3;height:100%;background:#ffb119;font-size:15px;color:white;align-content:center;justify-content:center;text-align:center;line-height:44px;font-weight:bold;' bindtap='userAddProductToShopCart'>加入购物车</label>
+        <!-- 立即购买 -->
+        <label style='flex:3;height:100%;background:#d72c2a;line-height:44px;font-weight:bold;text-align:center;font-size:15px;color:white;'>立即购买</label>
+</view>
+
+</view>
+
+

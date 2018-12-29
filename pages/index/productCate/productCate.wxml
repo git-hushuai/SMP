@@ -1,0 +1,52 @@
+
+
+<scroll-view class='base_scrollView'>
+<!-- 搜索框 -->
+  <view class='searchContainerView'></view>
+<!-- 分类 -->
+  <view class='cateGoryContainerView'>
+      <block wx:for='{{categoryMode}}' wx:for-index='idx' wx:key='cate_name.CN'>
+          <label class='catelabelClass' bindtap='userChangeCateAction' data-index='{{idx}}'>{{item.cate_name.CN}}</label>
+      </block>
+  </view>
+  <!-- 分类底部 -->
+  <view class='cateBottomIndexView' style='margin-left:{{cateBottomLeftMargin}};'></view>
+
+  <view class='cateContainerInfoView'>
+  <!-- 左边 -->
+    <view class='cateIndexContainerView'>
+        <block wx:for='{{categoryMode[subCateIndex].child}}' wx:key='id' wx:for-index='idx'>
+            <label style='font-size:12px;color:#333;text-align: center;width:100%;height:40px;line-height:40px;align-self:center;background:{{idx==ssubCateIndex?"#fafafa":"white"}}' bindtap='userChangeSubCateIndex' data-index='{{idx}}'>{{item.cate_name.CN}}</label>
+        </block>
+    </view>
+    <!-- 右边 -->
+    <view class='cate_rightContainerView'>
+      <view>
+        <block wx:for='{{categoryMode[subCateIndex].child[ssubCateIndex].child}}' wx:key='id' wx:for-index='idx'>
+
+<!-- 顶部分类索引 -->
+            <view style='width:100%;display:flex;height:40px;flex-direction:row;background-color:#fafafa;' bindtap='usercheckSubAllProductAction' data-model='{{item}}'>
+                <label style='font-size:12px;color:#333;height:40px;line-height:40px;'>{{item.cate_name.CN}}</label>
+                <label style='flex:1;align-self: flex-end;height:40px;line-height:40px;text-align: right;font-size:12px;color:#333;margin-right: 14px;'>查看全部</label>
+            </view>
+
+<!-- 商品索引 -->
+          <view class='cate_rightProductListView'>
+              <block wx:for='{{item.child}}' wx:key='id' wx:for-index='idx2' wx:for-item='itemModel'>
+              
+                  <view class='cate_rightProductItemView' bindtap='usercheckSubAllProductAction' data-model='{{itemModel}}'>
+                    <image style='width:100%;height:80%;align-self:center;' mode='aspectFit' src='{{itemModel.cate_thumb.CN}}'></image>
+                    <label style='font-size:12px;color:#999;text-align:center;'>{{itemModel.cate_name.CN}}</label>
+                  </view>
+              </block>
+          </view>
+
+        </block>
+      </view>
+    </view>
+  </view>
+
+
+</scroll-view>
+
+

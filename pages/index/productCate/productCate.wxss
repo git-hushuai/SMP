@@ -1,0 +1,101 @@
+
+
+.base_scrollView{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  background-color: #fafafa;
+}
+
+.searchContainerView{
+  position: fixed;
+  display: flex;
+  top: 0px;
+  height: 30px;
+  width: 96vw;
+  background-color: pink;
+  margin-left: 2vw;
+}
+
+.cateGoryContainerView{
+  flex-direction: row;
+  height: 40px;
+  top: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+}
+
+.catelabelClass{
+  flex:1;
+  display:1;
+  line-height:40px;
+  text-align: center;
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cateBottomIndexView{
+  height: 1px;
+  background-color: #d72c2a;
+  width: 33.3vw;
+  margin-left: 0px;
+  position: fixed;
+  display: flex;
+  top: 70px;
+}
+
+.cateContainerInfoView{
+  display: flex;
+  flex-direction: row;
+  /* /* flex: 1; */
+  background-color:#fafafa;
+  height: calc(100% - 71px);
+  margin-top: 71px;
+
+}
+
+.cate_rightContainerView{
+  display: flex;
+  flex: 1;
+  background:#fff;
+  height: 100%;
+  /* margin-left: 10px; */
+  flex-direction: column;
+  margin-left: 25.5vw
+}
+
+.cateIndexContainerView{
+  width:24vw;
+  display:flex;
+  height:100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: white;
+  position: fixed;
+  top: 71px;
+}
+
+
+.cate_rightProductListView{
+  background-color: white;
+  flex:1;
+  margin-right:14px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cate_rightProductItemView{
+  width: 33.33%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+
+  /* margin-left: 0.1%; */
+}

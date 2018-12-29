@@ -1,0 +1,14 @@
+
+
+<template name="productSubjectCode7">
+    <view wx:if='{{item.code == 7}}' style='height:{{item.imgWidth}};' class='subSecKillCode7ContainerStyle'>
+        <block wx:for="{{item.data.content}}" wx:for-index='idx' wx:key='{{item.data.content[idx].goods_thumb}}'>
+            <view class='subSecKillCode7ItemContainerStyle' bindtap='userCheckProductDetailAction' data-model='{{item}}'>
+                <image src='{{item.goods_thumb}}' style='width:90%;height:60%; align-self: center;'></image>
+                <label class='subSecKillCode7ItemTextStyle,my_text_2' style='text-align:center;'>{{item.goods_title.CN}}</label>
+                <label class='subSecKillCode7ItemTextStyle,my_text_2'>{{item.product_price}}</label>
+                <label class='subSecKillCode7ItemTextStyle,my_text_2' style=''>{{item.market_price}}</label>
+            </view>
+        </block>
+  </view>
+</template>

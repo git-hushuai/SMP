@@ -1,0 +1,8 @@
+
+
+
+<template name="productSubBannerxml">
+        <view>
+          <image class='bannerImage' src='{{item.data.content.img_url.CN}}' mode='widthFix' bindtap='userLongTapProductAction' data-model='{{item}}'></image>
+        </view>     
+</template>

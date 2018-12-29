@@ -1,0 +1,7 @@
+
+
+
+<template name="DNBaseModelBGView">
+  <view class="mask" style='width:100%;height:100vh;position:fixed;top:0;left:0;background: #000;z-index:9000;opacity:0.7;' catchtouchmove="preventTouchMove" wx:if="{{showModal}}" bindtap='hiddenModelAction'>
+  </view>
+</template>
