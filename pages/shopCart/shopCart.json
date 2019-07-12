@@ -1,1 +1,6 @@
-{}
+{
+
+    "usingComponents": {
+      "MineTestComponent" : "./component/testComponent"
+    }
+}

@@ -1,0 +1,16 @@
+<!--pages/shopCart/component/testComponent.wxml-->
+
+<view class='componentContainer'>
+
+    <slot name="before"></slot>
+    <view>这里是组件的内部节点</view>
+    <slot name = "after"></slot> 
+
+    <view class='animationView1'></view>
+
+    <view class='textContainer'>
+      <label class='textLabel'></label>
+      <view class='detailLabel'></view>
+    </view>
+
+</view>

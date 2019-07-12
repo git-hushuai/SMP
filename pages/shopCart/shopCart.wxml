@@ -1,1 +1,14 @@
-<view></view>
+
+
+
+<view class='sup'>
+
+  <MineTestComponent >
+  
+    <view slot="before"> before这里是插入到组件slot的内容</view>
+
+    <view slot="after"> after这里是插入到组件slot的内容</view>
+
+  </MineTestComponent>
+
+</view>

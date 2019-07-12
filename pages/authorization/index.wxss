@@ -1,0 +1,38 @@
+.logo {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 100rpx auto 26rpx;
+  display: block;
+}
+.title {
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 40rpx;
+  color: #000000;
+  margin-bottom: 70rpx;
+}
+.wrap {
+  margin: 0 60rpx;
+  border-top: 1rpx solid #d5d5d5;
+  padding-top: 40rpx;
+}
+.wrap .text1 {
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+.wrap .text2 {
+  line-height: 60rpx;
+  color: #999;
+  font-size: 28rpx;
+  margin-bottom: 70rpx;
+}
+.wrap .text2:before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 8rpx;
+  margin: 27rpx 32rpx 0 8rpx;
+  background: #666;
+}

@@ -1,0 +1,64 @@
+/* pages/shopCart/component/testComponent.wxss */
+
+
+:host{
+  color:  red;
+}
+
+
+.animationView1{
+
+  width: 200rpx;
+  height: 200rpx;
+
+  /* background-color: pink; */
+
+  animation:   change-background 4s linear infinite;
+}
+
+@keyframes change-background {
+
+  0% {
+    background: blue;
+  }
+
+  50%{
+    background: orange;
+  }
+
+  100%{
+    background: green;
+  }
+}
+
+
+.textContainer{
+  position: absolute;
+  height: 200rpx;
+  background-color: pink;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  transition:  all 0.5s cubic-bezier(0.48, -0.28, 0.41, 1.4);
+
+}
+
+.textLabel{
+  height: 200rpx;
+  background-color: red;
+  position: inherit;
+  width: 100%;
+    transition: all 0.4s ease-out;
+}
+
+.detailLabel{
+  position: inherit;
+  height: 300rpx;
+  background-color: pink;
+  left: 0;
+  right: 0;
+  top: 200rpx;
+  opacity: 0;
+}

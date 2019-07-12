@@ -1,5 +1,4 @@
 {
-  "debug": "true",
   "pages":[
     "pages/index/index",
     "pages/crowdFund/index",
@@ -10,7 +9,8 @@
     "pages/index/productList/productList",
     "pages/index/ProductDetail/EWGProductDetail",
     "pages/index/productCate/productCate",
-    "pages/index/Login/ewgLogin"
+    "pages/index/Login/ewgLogin",
+    "pages/authorization/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
